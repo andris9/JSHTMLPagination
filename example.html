@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            #pager{
+                width: 250px;
+                height: 320px;
+                border: 1px dotted #333;
+                padding:5px;
+                margin: 5px;
+            }
+            
+            #pager p{
+                margin:0;
+                padding: 3px 0;
+            }
+            
+            #pager h1{
+                margin:0;
+                padding: 3px 0;
+            }
+        </style>
+        
+        <script type="text/javascript" src="jshtmlpagination.js"></script>
+        
+        <script type="text/javascript">
+        
+            // run after page load
+            document.addEventListener("DOMContentLoaded", function(){
+            
+                var pager_elm = document.getElementById("pager"),
+                    data_elm = document.getElementById("data").cloneNode(true);
+               
+                data_elm.style.display = "block";
+            
+                // create new pager
+                var pager = new JSHTMLPagination(pager_elm, data_elm);
+                
+                // button next
+                document.getElementById("next").addEventListener("click", function(){
+                    pager.next();
+                }, false);
+                
+                // button previous
+                document.getElementById("previous").addEventListener("click", function(){
+                    pager.previous();
+                }, false);
+            
+            }, false);
+        
+        </script>
+    </head>
+    <body>
+    
+        <!-- paging container -->
+        <div id="pager"></div>
+        
+        <!-- button previous -->
+        <input type="button" name="previous" id="previous" value="Previous" /> 
+        
+        <!-- button next -->
+        <input type="button" name="next" id="next" value="Next" />
+    
+        <!-- this is the source text for paging. -->
+        <div id="data" style="display:none">
+            <div>
+                <h1>Tri-tip jowl tongue</h1>
+                <p>Ball tip beef short ribs ground round pastrami rump strip steak meatball ribeye flank.  Hamburger shank pork chop tongue.  Pork chop beef tenderloin pork, shank corned beef ground round shankle tri-tip.  Short ribs tenderloin pig shoulder cow bresaola, jowl corned beef flank turkey boudin ribeye meatball pastrami pancetta.  Ground round strip steak tri-tip chicken, pastrami boudin tongue.  Brisket short ribs shoulder swine boudin jerky beef, bacon pork chop pork loin strip steak pork andouille.  Sirloin hamburger rump, ham hock bresaola meatball meatloaf tri-tip pork chop beef ribs chuck salami spare ribs fatback.</p><p>Strip steak jerky t-bone headcheese, fatback pork meatball beef boudin ribeye pork chop flank jowl hamburger tenderloin.  Rump cow tail brisket tongue sausage.  Ham pancetta boudin rump corned beef, ribeye beef ribs drumstick flank sausage swine andouille.  Meatloaf beef ribs short ribs boudin, sausage drumstick short loin turkey swine pancetta ribeye shankle headcheese fatback.  Venison ham hamburger, brisket meatball andouille ribeye.  Ground round drumstick tongue short ribs, corned beef turkey pork tri-tip pork chop chuck chicken brisket pork loin salami shoulder.  Turkey meatloaf ham, shankle sausage cow pig jowl pork loin shank boudin bacon corned beef.</p><p>Tenderloin ham bresaola, boudin short loin drumstick tail pork belly pork chop chicken flank fatback hamburger.  Shank headcheese pork loin salami, shankle spare ribs ribeye sausage tongue strip steak.  Shank salami brisket fatback pork chop tenderloin, t-bone ground round chuck tail cow corned beef drumstick pastrami flank.  Bacon strip steak ribeye ham hock turkey brisket flank short ribs ball tip jowl, tongue meatloaf salami.  Salami pork chop headcheese, venison beef ribs boudin hamburger sirloin meatball chicken pastrami tenderloin.  Ham hock ribeye bresaola salami, hamburger beef ribs tenderloin.  Spare ribs sausage jerky jowl.</p><p>Beef bacon shankle swine ham hock chicken, tenderloin biltong ball tip sirloin pastrami.  Tongue pig bacon, shankle strip steak pork chop pastrami beef sausage spare ribs pork loin sirloin turkey ground round.  Pastrami tenderloin short loin, bresaola shoulder ball tip fatback strip steak tongue pork ham hock pork chop chuck boudin pancetta.  Rump spare ribs venison, t-bone meatball ham short ribs beef ribs hamburger corned beef.  Sirloin pancetta biltong spare ribs, ham hock jowl beef cow pork chop andouille.  Bresaola bacon beef, ground round beef ribs rump venison pancetta ribeye corned beef sausage chuck jerky.  Strip steak pancetta andouille flank, tri-tip swine ball tip shankle t-bone corned beef pork loin.</p><p>Corned beef flank tri-tip strip steak.  Cow strip steak swine, salami corned beef pork loin fatback shank ground round ham hock hamburger ribeye shoulder pancetta.  Ham pastrami shoulder strip steak beef jerky.  Shoulder salami meatball, tenderloin short loin pork belly spare ribs.  Pork loin salami ham hock shank drumstick, chicken shankle jerky ham flank corned beef.  Turkey pork loin shank brisket.  Pork chop shank corned beef, sausage ribeye chuck short ribs tongue ground round pork belly jowl bresaola tri-tip.</p>
+            </div>
+        </div>
+    
+        <p><b>NB!</b> This example currently works only in Chrome and Safari</p>
+    
+    </body>
+</html>
