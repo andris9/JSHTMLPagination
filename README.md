@@ -18,3 +18,7 @@ and
 
     
 See example.html for a better example or [this demo](http://tahvel.info/pagination/example.html).
+
+## How does it work?
+
+**JSHTMLPagination** makes use of *multi column* support in CSS3. The text is divided into columns with the paging screen dimensions and layed out accordingly.
