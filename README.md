@@ -1,6 +1,6 @@
 # JSHTMLPagination
 
-**JSHTMLPagination** is a small library to achieve pagination in modern browsers (currently supported Chrome and Safari).
+**JSHTMLPagination** is a small library to achieve pagination of arbitrary HTML in modern browsers (currently supported Chrome and Safari).
 
 ## Usage
 
